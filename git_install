@@ -1,0 +1,56 @@
+Linux:
+sudo apt-get install git
+
+创建版本库（repository）
+例：
+Step 1:
+
+mkdir learngit
+cd learngit
+pwd
+
+# 创建并查看文件目录路径
+
+Step 2:
+
+git init
+
+# 此命令将该目录变为git可以管理的仓库
+
+Step 3:
+# 写项目代码
+
+Step 4:
+# 将项目上传到git仓库
+
+git add 文件名
+git commit -m "说明注释"
+# 提交到仓库
+git status
+git log
+
+git diff 文件名
+
+git reset --hard commit_id
+# 版本回退
+
+HEAD
+# 指向当前版本
+
+git checkout -- 文件名
+# 丢弃当前工作区的修改
+
+git rm
+
+Step 5:
+# 本地Git仓库和GitHub仓库之间的传输是通过SSH加密的
+5.1 创建ssh key 在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件
+id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
+
+ssh-keygen -t rsa -C "youremail@example.com"
+
+5.2 登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+详细操作请参考
+https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416
+
+未完待续...
